@@ -7,7 +7,7 @@ $ ->
   $("#clear_filters").click ->
     $('#filters input:checkbox').removeAttr('checked')
     attributes.length = sqft_values.length = 0
-    $(".unit").show()
+    $("#tabs-1 .unit").show()
 
   ##
   #
@@ -35,15 +35,15 @@ $ ->
     attr_val = if attributes.length > 0 then true else false
     sqft_val = if sqft_values.length > 0 then true else false
 
-    $(".unit").hide()
-    $(".unit").each ->
+    $("#tabs-1 .unit").hide()
+    $("#tabs-1 .unit").each ->
       attr_match  = attribute_matcher($(this).attr('data-description'))
       sqft_match  = sqft_matcher(parseInt($(this).attr('data-sqft')))
 
       $(this).show() if attr_val and sqft_val and attr_match and sqft_match
       $(this).show() if not attr_val and sqft_val and sqft_match
       $(this).show() if attr_val and not sqft_val and attr_match
-      $(".unit").show() if not attr_val and not sqft_val
+      $("#tabs-1 .unit").show() if not attr_val and not sqft_val
 
   ##
   #
