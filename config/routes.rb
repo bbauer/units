@@ -1,6 +1,6 @@
 StorageUi::Application.routes.draw do
   resources :units
-
+  root :to => 'units#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
