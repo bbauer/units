@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Size:</b>
+  <%= @unit.size %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @unit.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @unit.price %>
+</p>
+
+<p>
+  <b>Sqft:</b>
+  <%= @unit.sqft %>
+</p>
+
+<p>
+  <b>Promotion:</b>
+  <%= @unit.promotion %>
+</p>
+
+
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Back', units_path %>
