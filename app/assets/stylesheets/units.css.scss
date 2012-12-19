@@ -84,7 +84,25 @@
 #tabs {
   padding-bottom:30px;
 }
+/*.sorting_1,
+table.dataTable tr.even td.sorting_1 {
+  background:inherit;
+}
 
+.odd {
+  color: #8584B2;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3E3E4F), color-stop(50%, #3D3D4D), color-stop(50%, #383949), color-stop(100%, #373747));
+  background-image: -webkit-linear-gradient(top, #3E3E4F,#3D3D4D 50%,#383949 50%,#373747);
+  background-image: -moz-linear-gradient(top, #3E3E4F,#3D3D4D 50%,#383949 50%,#373747);
+  background-image: -o-linear-gradient(top, #3E3E4F,#3D3D4D 50%,#383949 50%,#373747);
+  background-image: -ms-linear-gradient(top, #3E3E4F,#3D3D4D 50%,#383949 50%,#373747);
+  background-image: linear-gradient(top, #3E3E4F,#3D3D4D 50%,#383949 50%,#373747);
+}
+
+table.dataTable tr.even {
+  background:#282936;
+  color: #8584B2;
+}*/
 
 /*
  * Sorting
