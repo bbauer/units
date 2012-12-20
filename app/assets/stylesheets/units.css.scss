@@ -2,6 +2,82 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-shadow:1px 1px 0 #fff;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #1BB5E0;
+  }
+  &:hover {
+    color: #6FDAF7;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+h1 {
+  font-size: 57px;
+  font-weight: normal;
+  color:#ddd;
+}
+
 #container {
   width:800px;
   margin:70px auto;
@@ -29,6 +105,7 @@
   h3 {
     clear:both;
     margin-bottom:8px;
+    font-weight: normal;
   }
 }
 
@@ -74,16 +151,50 @@
   background: -ms-linear-gradient(#efefef, #d3d3d3);
   background: -o-linear-gradient(#efefef, #d3d3d3);
   background: linear-gradient(#efefef, #d3d3d3);
+
+  background: -moz-linear-gradient(#6FDAF7, #1BB5E0);
+  background: -ms-linear-gradient(#6FDAF7, #1BB5E0);
+  background: -o-linear-gradient(#6FDAF7, #1BB5E0);
+  background: -webkit-linear-gradient(#6FDAF7, #0E9AC2);
+  background: linear-gradient(#6FDAF7, #1BB5E0);
+  border:1px solid #1BB5E0;
+  border-bottom:1px solid #0E9AC2;
+  color:#fff;
+  text-shadow:-1px -1px 0 #0E9AC2;
+}
+
+#clear_filters:hover {
+  background:#1BB5E0;
 }
 
 .units-table {
   clear:both;
   background:#fff;
+  border-radius: 5px;
 }
 
 #tabs {
   padding-bottom:30px;
+  -moz-box-shadow:    0 0 4px 4px #eee;
+  -webkit-box-shadow: 0 0 4px 4px #eee;
+  box-shadow:         0 0 4px 4px #eee;
 }
+
+table.dataTable thead th {
+  font-weight:normal;
+}
+
+body .ui-widget input {
+  border:1px solid #ddd;
+  border-radius: 5px;
+  padding: 3px 5px;
+}
+
+body .ui-widget-content {
+  color: #333/*{fcContent}*/;
+}
+
+
 /*.sorting_1,
 table.dataTable tr.even td.sorting_1 {
   background:inherit;
