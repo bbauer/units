@@ -3,9 +3,9 @@ class UnitsController < ApplicationController
   # GET /units.json
   def index
     @units = Unit.all
-    @storage_units = @units.reject { |u| u.category == "Parking" }
+    @storage_units = @units.reject { |u| u.category == "Parking" || u.category == "Wine"  }
     @parking_units = @units.select { |u| u.category == "Parking" }
-
+    @wine_units = @units.select { |u| u.category == "Wine" }
 
     respond_to do |format|
       format.html # index.html.erb

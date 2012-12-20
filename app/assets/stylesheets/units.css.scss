@@ -196,6 +196,16 @@ body .ui-widget-content {
   color: #333/*{fcContent}*/;
 }
 
+body .dataTables_info {
+  color:#aaa;
+  font-size: 12px;
+}
+
+body .dataTables_paginate {
+  /*display:none;*/
+  color:#aaa;
+  font-size: 12px;
+}
 
 /*.sorting_1,
 table.dataTable tr.even td.sorting_1 {

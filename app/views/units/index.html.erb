@@ -4,6 +4,7 @@
   <ul>
     <li><a href="#tabs-1">Self Storage</a></li>
     <li><a href="#tabs-2">Parking</a></li>
+    <li><a href="#tabs-3">Wine</a></li>
   </ul>
 
   <div id="tabs-1">
@@ -91,6 +92,32 @@
 
       <tbody>
         <% @parking_units.each do |unit| %>
+          <tr class="unit" data-description="<%= unit.description %>" data-sqft="<%= unit.sqft %>" data-price="<%= unit.sqft %>">
+            <td class="size"><%= unit.size %></td>
+            <td class="description"><%= unit.description %></td>
+            <td class="price">$<%= number_with_precision(unit.price.to_f, :precision => 2) %></td>
+            <td class="sqft"><%= unit.sqft %></td>
+            <td class="promotion"><%= unit.promotion %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+   <div id="tabs-3">
+    <table class="units-table wine" cellspacing="0" cellpadding="0">
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Sqft</th>
+          <th>Promotion</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @wine_units.each do |unit| %>
           <tr class="unit" data-description="<%= unit.description %>" data-sqft="<%= unit.sqft %>" data-price="<%= unit.sqft %>">
             <td class="size"><%= unit.size %></td>
             <td class="description"><%= unit.description %></td>
