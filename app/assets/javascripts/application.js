@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui.min
+//= require jquery.jqtransform
+//= require iphone-style-checkboxes
+//= require jquery.uniform.min
 //= require_tree .

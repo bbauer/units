@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: #fff;
+  background-color: #E6EBED;
   color: #555;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
@@ -75,7 +75,7 @@ div {
 h1 {
   font-size: 57px;
   font-weight: normal;
-  color:#ddd;
+  color:#C9CFD1;
 }
 
 #container {
@@ -123,6 +123,8 @@ h1 {
 
   label {
     cursor:pointer;
+    position: relative;
+    top: 2px;
   }
 }
 
@@ -175,9 +177,9 @@ h1 {
 
 #tabs {
   padding-bottom:30px;
-  -moz-box-shadow:    0 0 4px 4px #eee;
-  -webkit-box-shadow: 0 0 4px 4px #eee;
-  box-shadow:         0 0 4px 4px #eee;
+  -moz-box-shadow:    0 0 4px 4px #DADEE0;
+  -webkit-box-shadow: 0 0 4px 4px #DADEE0;
+  box-shadow:         0 0 4px 4px #DADEE0;
 }
 
 table.dataTable thead th {
