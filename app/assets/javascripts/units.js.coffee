@@ -8,7 +8,7 @@ $ ->
     $('#filters input:checkbox').removeAttr('checked')
     attributes.length = sqft_values.length = 0
     $("#tabs-1 .unit").show()
-    $(".checker span").removeClass('checked')
+    $.uniform.update()
 
   ##
   #

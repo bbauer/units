@@ -24,12 +24,14 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #85B2CB;
+  text-decoration:none;
+
   &:visited {
-    color: #1BB5E0;
+    color: #85B2CB;
   }
   &:hover {
-    color: #6FDAF7;
+    color: #B9E0F5;
   }
 }
 
@@ -154,19 +156,70 @@ h1 {
   background: -o-linear-gradient(#efefef, #d3d3d3);
   background: linear-gradient(#efefef, #d3d3d3);
 
-  background: -moz-linear-gradient(#6FDAF7, #1BB5E0);
-  background: -ms-linear-gradient(#6FDAF7, #1BB5E0);
-  background: -o-linear-gradient(#6FDAF7, #1BB5E0);
-  background: -webkit-linear-gradient(#6FDAF7, #0E9AC2);
-  background: linear-gradient(#6FDAF7, #1BB5E0);
-  border:1px solid #1BB5E0;
-  border-bottom:1px solid #0E9AC2;
+  background: -moz-linear-gradient(#B9E0F5, #85B2CB);
+  background: -ms-linear-gradient(#B9E0F5, #85B2CB);
+  background: -o-linear-gradient(#B9E0F5, #85B2CB);
+  background: -webkit-linear-gradient(#B9E0F5, #85B2CB);
+  background: linear-gradient(#B9E0F5, #85B2CB);
+  border:1px solid #85B2CB;
+  border-bottom:1px solid #85B2CB;
   color:#fff;
-  text-shadow:-1px -1px 0 #0E9AC2;
+  text-shadow:-1px -1px 0 #85B2CB;
 }
 
 #clear_filters:hover {
-  background:#1BB5E0;
+  background:#85B2CB;
+}
+
+body .ui-widget-header {
+  background: -moz-linear-gradient(#B9E0F5, #85B2CB);
+  background: -ms-linear-gradient(#B9E0F5, #85B2CB);
+  background: -o-linear-gradient(#B9E0F5, #85B2CB);
+  background: -webkit-linear-gradient(#B9E0F5, #85B2CB);
+  background: linear-gradient(#B9E0F5, #85B2CB);
+  border:1px solid #85B2CB;
+  border-bottom:1px solid #85B2CB;
+  background:#222;
+
+  background: -moz-linear-gradient(#444, #222);
+  background: -ms-linear-gradient(#444, #222);
+  background: -o-linear-gradient(#444, #222);
+  background: -webkit-linear-gradient(#444, #222);
+  background: linear-gradient(#444, #222);
+  border:1px solid #222;
+}
+
+body .ui-tabs .ui-tabs-nav {
+  margin: 0;
+  padding:0.7em .7em 0;
+}
+
+body .ui-state-default, body .ui-widget-content .ui-state-default, body .ui-widget-header .ui-state-default {
+  border: none;
+  background: #888;
+  background-image:none;
+  font-weight: normal/*{fwDefault}*/;
+  color: #555/*{fcDefault}*/;
+  text-shadow:1px 1px 0 #999;
+}
+
+body .ui-state-active, body .ui-widget-content .ui-state-active, body .ui-widget-header .ui-state-active {
+  border: none;
+  background: white/*{bgColorActive}*/ url(images/ui-bg_glass_65_ffffff_1x400.png)/*{bgImgUrlActive}*/ 50%/*{bgActiveXPos}*/ 50%/*{bgActiveYPos}*/ repeat-x/*{bgActiveRepeat}*/;
+  font-weight: normal/*{fwDefault}*/;
+  color: #212121/*{fcActive}*/;
+  text-shadow:none;
+}
+
+body .ui-tabs .ui-tabs-nav li {
+  list-style: none;
+  float: left;
+  position: relative;
+  top: 1px;
+  margin: 1px .2em 0 0;
+  border-bottom: 0;
+  padding: 0;
+  white-space: nowrap;
 }
 
 .units-table {
