@@ -126,16 +126,10 @@
 
 <%= link_to 'New Unit', new_unit_path, :class => 'new_unit' %>
 
-<script type="text/javascript">
-  $(function() {
-    $('.units-table').dataTable();
-  });
+<select onchange="window.location.href=this.value;">
+  <option selected>Edit Unit</option>
 
-  $(function() {
-    //$(".filters").buttonset();
-    $( "#tabs" ).tabs();
-    //$("#filters").jqTransform();
-    //$(':checkbox').iphoneStyle();
-    $("select, input, textarea").uniform();
-  });
-</script>
+  <%= @units.each do |u| %>
+    <option value="/units/<%= u.id %>/edit"><%= u.size %> - <%= u.price %> - <%= u.description %></option>
+  <% end %>
+</select>

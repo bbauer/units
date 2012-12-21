@@ -183,7 +183,22 @@ h1 {
   background: -o-linear-gradient(#B9E0F5, #85B2CB);
   background: -webkit-linear-gradient(#B9E0F5, #85B2CB);
   background: linear-gradient(#B9E0F5, #85B2CB);
-  border:1px solid #85B2CB;
+  border:1px solid #85B2CB;input.text, input.email, input.password, textarea.uniform {
+font-size: 12px;
+font-weight: normal;
+padding: 3px;
+color: #777;
+background: url('bg-input-focus.png') repeat-x 0px 0px;
+background: url('bg-input.png') repeat-x 0px 0px white;
+border-top: solid 1px #AAA;
+border-left: solid 1px #AAA;
+border-bottom: solid 1px #CCC;
+border-right: solid 1px #CCC;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+outline: 0;
+}
   border-bottom:1px solid #85B2CB;
   color:#fff;
   text-shadow:-1px -1px 0 #85B2CB;
@@ -193,7 +208,7 @@ a.new_unit {
   text-shadow:-1px -1px 0 #fff;
   color:#666;
   clear:both;
-  padding: 8px 15px;
+  padding: 3px 11px;
   border-radius: 5px;
   border:1px solid #ccc;
   border-bottom: 1px solid #aaa;
@@ -314,6 +329,7 @@ body .ui-widget input {
   border:1px solid #ddd;
   border-radius: 5px;
   padding: 3px 5px;
+  min-width:200px;
 }
 
 body .ui-widget-content {
@@ -337,6 +353,26 @@ body .ui-tabs .ui-tabs-panel {
   padding: 1.8em 2.6em;
   background: none;
 }
+
+input.text, input.email, input.password, textarea.uniform {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 3px;
+  color: #777;
+  background: url('bg-input-focus.png') repeat-x 0px 0px;
+  background: url('bg-input.png') repeat-x 0px 0px white;
+  border-top: solid 1px #AAA;
+  border-left: solid 1px #AAA;
+  border-bottom: solid 1px #CCC;
+  border-right: solid 1px #CCC;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  outline: 0;
+  padding:8px 10px;
+  min-width:330px;
+}
+
 /*.sorting_1,
 table.dataTable tr.even td.sorting_1 {
   background:inherit;

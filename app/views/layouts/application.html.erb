@@ -14,4 +14,12 @@
       <%= yield %>
     </div>
   </body>
+
+  <script type="text/javascript">
+    $(function() {
+      $('.units-table').dataTable();
+      $( "#tabs" ).tabs();
+      $("select, input, textarea, number").uniform();
+    });
+  </script>
 </html>
