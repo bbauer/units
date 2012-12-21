@@ -22,7 +22,7 @@
 
       <h3>Filter by Size</h3>
       <ul class="filters sqft">
-        <li>
+        <!--<li>
           <input type="checkbox" value="0-100" id="filter-small" />
           <label for="filter-small">Small</label>
         </li>
@@ -36,6 +36,25 @@
         </li>
         <li>
           <input type="checkbox" value="501+" id="filter-gigantic" />
+          <label for="filter-gigantic">Warehouse</label>
+        </li>
+      </ul>-->
+
+      <ul class="filters sqft">
+        <li>
+          <input type="radio" value="0-100" name="group1" id="filter-small" />
+          <label for="filter-small">Small</label>
+        </li>
+        <li>
+          <input type="radio" value="100-300" name="group1" id="filter-medium" />
+          <label for="filter-medium">Medium</label>
+        </li>
+        <li>
+          <input type="radio" value="300-500" name="group1" id="filter-large" />
+          <label for="filter-large">Large</label>
+        </li>
+        <li>
+          <input type="radio" value="501+" name="group1" id="filter-gigantic" />
           <label for="filter-gigantic">Warehouse</label>
         </li>
       </ul>

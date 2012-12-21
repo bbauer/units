@@ -145,6 +145,10 @@ h1 {
   padding-bottom:42px;
 }
 
+.sqft {
+  padding-bottom:23px;
+}
+
 
 #clear_filters {
   text-shadow:-1px -1px 0 #fff;
@@ -352,6 +356,10 @@ body .ui-tabs .ui-tabs-panel {
   border-width: 0;
   padding: 1.8em 2.6em;
   background: none;
+}
+
+body div.radio {
+  margin-right: 4px;
 }
 
 input.text, input.email, input.password, textarea.uniform {

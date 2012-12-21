@@ -6,6 +6,7 @@ $ ->
   #
   $("#clear_filters").click ->
     $('#filters input:checkbox').removeAttr('checked')
+    $('#filters input:radio').removeAttr('checked')
     attributes.length = sqft_values.length = 0
     $("#tabs-1 .unit").show()
     $.uniform.update()
@@ -22,10 +23,20 @@ $ ->
 
   ##
   #
-  $(".sqft :checkbox").click ->
+  $(".sqft2 :checkbox").click ->
     sqft_values.length = 0
 
     $(".sqft :checkbox:checked").each ->
+      sqft_values.push($(this).val())
+
+    redraw_table()
+
+  ##
+  #
+  $(".sqft :radio").click ->
+    sqft_values.length = 0
+
+    $(".sqft :radio:checked").each ->
       sqft_values.push($(this).val())
 
     redraw_table()
