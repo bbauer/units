@@ -12,22 +12,12 @@
       <h3>Filter by Attribute</h3>
 
       <ul class="filters attributes">
-        <li>
-          <input type="checkbox" value="climate" id="filter-climate" />
-          <label for="filter-climate">Climate</label>
-        </li>
-        <li>
-          <input type="checkbox" value="indoor" id="filter-indoor" />
-          <label for="filter-indoor">Indoor</label>
-        </li>
-        <li>
-          <input type="checkbox" value="alarm" id="filter-alarm" />
-          <label for="filter-alarm">Alarm</label>
-        </li>
-        <li>
-          <input type="checkbox" value="drive-up" id="filter-drive-up" />
-          <label for="filter-drive-up">Drive-up</label>
-        </li>
+        <% @features.each do |feature| %>
+          <li>
+            <input type="checkbox" value="<%= feature %>" id="filter-<%= feature %>" />
+            <label for="filter-<%= feature %>"><%= feature %></label>
+          </li>
+        <% end %>
       </ul>
 
       <h3>Filter by Size</h3>
@@ -134,7 +124,7 @@
 
 <br />
 
-<%= link_to 'New Unit', new_unit_path %>
+<%= link_to 'New Unit', new_unit_path, :class => 'new_unit' %>
 
 <script type="text/javascript">
   $(function() {
