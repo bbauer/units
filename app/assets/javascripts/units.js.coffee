@@ -2,13 +2,21 @@ $ ->
   attributes  = new Array()
   sqft_values = new Array()
 
+  $("#tabs-1 .unit").hide()
+  $("#tabs-1 .unit").each ->
+    $(this).show() if parseInt($(this).attr('data-sqft')) <=  100
+
   ##
   #
   $("#clear_filters").click ->
     $('#filters input:checkbox').removeAttr('checked')
     $('#filters input:radio').removeAttr('checked')
+    $('#filter-small').attr('checked', 'checked')
+    $("#tabs-1 .unit").hide()
+    $("#tabs-1 .unit").each ->
+      $(this).show() if parseInt($(this).attr('data-sqft')) <=  100
+
     attributes.length = sqft_values.length = 0
-    $("#tabs-1 .unit").show()
     $.uniform.update()
 
   ##

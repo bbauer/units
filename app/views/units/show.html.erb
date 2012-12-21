@@ -25,6 +25,6 @@
   <%= @unit.promotion %>
 </p>
 
-
+<%= link_to 'Destroy', @unit, :method => :delete, :data => { :confirm => 'Are you sure?' } %> |
 <%= link_to 'Edit', edit_unit_path(@unit) %> |
 <%= link_to 'Back', units_path %>

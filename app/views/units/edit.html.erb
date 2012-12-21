@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
+<%= link_to 'Destroy', @unit, :method => :delete, :data => { :confirm => 'Are you sure?' } %> |
 <%= link_to 'Show', @unit %> |
 <%= link_to 'Back', units_path %>
