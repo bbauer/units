@@ -75,14 +75,21 @@ div {
 }
 
 h1 {
-  font-size: 57px;
+  font-size: 47px;
   font-weight: normal;
-  color:#C9CFD1;
+  color:#d0d8db;
+  margin-left: 3px;
+
+  em {
+    font-weight:bold;
+    color:#d0d8db;
+    font-style:normal;
+  }
 }
 
 #container {
   width:800px;
-  margin:70px auto;
+  margin:60px auto;
   position:relative;
 }
 
@@ -138,7 +145,10 @@ h1 {
   padding-bottom:42px;
 }
 
+
 #clear_filters {
+  text-shadow:-1px -1px 0 #fff;
+  color:#666;
   clear:both;
   cursor:pointer;
   position:absolute;
@@ -155,7 +165,19 @@ h1 {
   background: -ms-linear-gradient(#efefef, #d3d3d3);
   background: -o-linear-gradient(#efefef, #d3d3d3);
   background: linear-gradient(#efefef, #d3d3d3);
+}
 
+#clear_filters {
+  clear:both;
+  cursor:pointer;
+  position:absolute;
+  top:20px;
+  right:20px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border:1px solid #ccc;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
   background: -moz-linear-gradient(#B9E0F5, #85B2CB);
   background: -ms-linear-gradient(#B9E0F5, #85B2CB);
   background: -o-linear-gradient(#B9E0F5, #85B2CB);
@@ -167,8 +189,14 @@ h1 {
   text-shadow:-1px -1px 0 #85B2CB;
 }
 
+
+
 #clear_filters:hover {
   background:#85B2CB;
+  border:1px solid #85B2CB;
+  border-bottom:1px solid #85B2CB;
+  color:#fff;
+  text-shadow:-1px -1px 0 #6994aa;
 }
 
 body .ui-widget-header {
