@@ -5,6 +5,12 @@ class UnitsController < ApplicationController
     @storage_units = @units.select { |u| u.category.blank?  }
     @parking_units = @units.select { |u| u.category == "Parking" }
     @wine_units = @units.select { |u| u.category == "Wine" }
+    @sizes = {
+      :small     => "0-100",
+      :medium    => "100-300",
+      :large     => "300-500",
+      :warehouse => "501"
+    }
 
     respond_to do |format|
       format.html # index.html.erb

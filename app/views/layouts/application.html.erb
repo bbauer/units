@@ -17,7 +17,10 @@
 
   <script type="text/javascript">
     $(function() {
-      $('.units-table').dataTable();
+      $('.units-table').dataTable({
+        "iDisplayLength": 100,
+      });
+
       $( "#tabs" ).tabs();
       $("select, input, textarea, number").uniform();
     });

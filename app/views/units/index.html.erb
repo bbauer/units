@@ -21,125 +21,30 @@
       </ul>
 
       <h3>Filter by Size</h3>
-      <ul class="filters sqft">
-        <!--<li>
-          <input type="checkbox" value="0-100" id="filter-small" />
-          <label for="filter-small">Small</label>
-        </li>
-        <li>
-          <input type="checkbox" value="100-300" id="filter-medium" />
-          <label for="filter-medium">Medium</label>
-        </li>
-        <li>
-          <input type="checkbox" value="300-500" id="filter-large" />
-          <label for="filter-large">Large</label>
-        </li>
-        <li>
-          <input type="checkbox" value="501+" id="filter-gigantic" />
-          <label for="filter-gigantic">Warehouse</label>
-        </li>
-      </ul>-->
 
       <ul class="filters sqft">
-        <li>
-          <input type="radio" value="0-100" name="group1" id="filter-small" checked="checked" />
-          <label for="filter-small">Small</label>
-        </li>
-        <li>
-          <input type="radio" value="100-300" name="group1" id="filter-medium" />
-          <label for="filter-medium">Medium</label>
-        </li>
-        <li>
-          <input type="radio" value="300-500" name="group1" id="filter-large" />
-          <label for="filter-large">Large</label>
-        </li>
-        <li>
-          <input type="radio" value="501+" name="group1" id="filter-gigantic" />
-          <label for="filter-gigantic">Warehouse</label>
-        </li>
+        <% @sizes.sort_by { |k,v| v }.each do |k, v| %>
+          <li>
+            <input type="radio" value="<%= v %>" name="group1" id="filter-<%= k.to_s %>" <%= 'checked="checked"' if k.to_s == "small" %> />
+            <label for="filter-<%= k.to_s %>"><%= k.to_s.capitalize %></label>
+          </li>
+        <% end %>
       </ul>
 
       <button id="clear_filters">Clear Filters</button>
     </div>
 
-    <table class="units-table self_storage" cellspacing="0" cellpadding="0">
-      <thead>
-        <tr>
-          <th>Size</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Sqft</th>
-          <th>Promotion</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @storage_units.each do |unit| %>
-          <tr class="unit" data-description="<%= unit.description %>" data-sqft="<%= unit.sqft %>" data-price="<%= unit.sqft %>">
-            <td class="size"><%= unit.size %></td>
-            <td class="description"><%= unit.description %></td>
-            <td class="price">$<%= number_with_precision(unit.price.to_f, :precision => 2) %></td>
-            <td class="sqft"><%= unit.sqft %></td>
-            <td class="promotion"><%= unit.promotion %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <%= render :partial => "data_table", :locals => {:units => @storage_units, :classs => 'self_storage'} %>
   </div>
 
   <div id="tabs-2">
-    <table class="units-table parking" cellspacing="0" cellpadding="0">
-      <thead>
-        <tr>
-          <th>Size</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Sqft</th>
-          <th>Promotion</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @parking_units.each do |unit| %>
-          <tr class="unit" data-description="<%= unit.description %>" data-sqft="<%= unit.sqft %>" data-price="<%= unit.sqft %>">
-            <td class="size"><%= unit.size %></td>
-            <td class="description"><%= unit.description %></td>
-            <td class="price">$<%= number_with_precision(unit.price.to_f, :precision => 2) %></td>
-            <td class="sqft"><%= unit.sqft %></td>
-            <td class="promotion"><%= unit.promotion %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <%= render :partial => "data_table", :locals => {:units => @parking_units, :classs => 'parking'} %>
   </div>
 
-   <div id="tabs-3">
-    <table class="units-table wine" cellspacing="0" cellpadding="0">
-      <thead>
-        <tr>
-          <th>Size</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Sqft</th>
-          <th>Promotion</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @wine_units.each do |unit| %>
-          <tr class="unit" data-description="<%= unit.description %>" data-sqft="<%= unit.sqft %>" data-price="<%= unit.sqft %>">
-            <td class="size"><%= unit.size %></td>
-            <td class="description"><%= unit.description %></td>
-            <td class="price">$<%= number_with_precision(unit.price.to_f, :precision => 2) %></td>
-            <td class="sqft"><%= unit.sqft %></td>
-            <td class="promotion"><%= unit.promotion %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+  <div id="tabs-3">
+    <%= render :partial => "data_table", :locals => {:units => @wine_units, :classs => 'wine'} %>
   </div>
 </div>
-
 
 <br />
 
