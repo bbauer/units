@@ -1,6 +1,12 @@
+require "lib/api"
+require "lib/api_v0"
+
 StorageUi::Application.routes.draw do
   resources :units
   root :to => 'units#index'
+
+  mount Inventory::API => "/"
+  mount InventoryV0::API => "/"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
