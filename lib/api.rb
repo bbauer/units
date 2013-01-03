@@ -20,10 +20,8 @@ module Inventory
       resource :search do
         desc "Return a unit set based on query"
         get ':keywords' do
-          keywords = params[:keywords].split("+").map { |k| "%#{k}%" }.join(" OR ")
-
-          #Unit.where("description like ?", "%#{params[:keywords]}%")
-          Unit.where("description like ?", keywords)
+          keywords = params[:keywords].split("+")
+          Unit.where([(['description LIKE ?'] * keywords.size).join(' AND ')] + keywords.map { |k| "%#{k}%" })
         end
       end
     end

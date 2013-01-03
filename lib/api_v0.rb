@@ -7,7 +7,7 @@ module InventoryV0
       resource :blah do
         desc "Get All Units"
         get "/" do
-          Unit.limit(5)
+          Unit.all
         end
 
         desc "Return a unit"
