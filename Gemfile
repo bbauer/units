@@ -9,9 +9,9 @@ gem 'grape'
 gem 'httparty'
 gem 'devise'
 gem 'activeadmin'
-gem 'rails_admin'
+#gem 'rails_admin'
 gem 'font-awesome-rails'
-gem 'lazy_high_charts'
+#gem 'lazy_high_charts'
 gem 'googlecharts'
 
 group :assets do
