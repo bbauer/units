@@ -9,7 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require jqtransform
- *= require style
  *= require uniform.default
  *= require uniform.aristo
  *= require 'font-awesome'
