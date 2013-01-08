@@ -77,7 +77,6 @@ GEM
       sass-rails (>= 3.1.1)
     formtastic (2.2.1)
       actionpack (>= 3.0)
-    googlecharts (1.6.8)
     grape (0.2.3)
       activesupport
       builder
@@ -221,7 +220,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   font-awesome-rails
-  googlecharts
   grape
   httparty
   jquery-rails
