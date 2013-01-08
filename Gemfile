@@ -10,7 +10,7 @@ gem 'httparty'
 gem 'devise'
 gem 'activeadmin'
 #gem 'rails_admin'
-gem 'font-awesome-rails'
+#gem 'font-awesome-rails'
 #gem 'lazy_high_charts'
 gem 'googlecharts'
 
