@@ -8,11 +8,11 @@ gem 'jquery-rails'
 gem 'grape'
 gem 'httparty'
 gem 'devise'
-#gem 'activeadmin'
+gem 'activeadmin'
 #gem 'rails_admin'
 gem 'font-awesome-rails'
 #gem 'lazy_high_charts'
-#gem 'googlecharts'
+gem 'googlecharts'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
