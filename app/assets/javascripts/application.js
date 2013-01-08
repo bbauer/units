@@ -16,4 +16,5 @@
 //= require jquery.jqtransform
 //= require iphone-style-checkboxes
 //= require jquery.uniform.min
+//= require highcharts
 //= require_tree .

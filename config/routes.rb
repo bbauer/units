@@ -2,8 +2,18 @@ require "./lib/api"
 require "./lib/api_v0"
 
 StorageUi::Application.routes.draw do
-  resources :units
+  mount RailsAdmin::Engine => '/rails_admin', :as => 'rails_admin'
+
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   root :to => 'units#index'
+
+  devise_for :users
+
+  resources :users
+  resources :units
 
   mount Inventory::API => "/"
   mount InventoryV0::API => "/"

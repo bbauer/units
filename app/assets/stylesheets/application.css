@@ -12,6 +12,7 @@
  *= require style
  *= require uniform.default
  *= require uniform.aristo
+ *= require 'font-awesome'
  *= require_self
  *= require_tree .
  */

@@ -1,4 +1,6 @@
 class UnitsController < ApplicationController
+  require 'gchart'
+
   def index
     @units = Unit.all
     @features = collect_unique_features(@units).reject { |f| f == "Parking" || f == "Wine Storage" }
@@ -11,6 +13,10 @@ class UnitsController < ApplicationController
       :large     => "300-500",
       :warehouse => "501"
     }
+
+    @storage_size = (@storage_units.size.to_f/@units.size.to_f) * 100
+    @wine_size = (@wine_units.size.to_f/@units.size.to_f) * 100
+    @parking_size = (@parking_units.size.to_f/@units.size.to_f) * 100
 
     respond_to do |format|
       format.html # index.html.erb

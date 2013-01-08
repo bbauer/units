@@ -4,6 +4,26 @@ module Inventory
     format :json
 
     resource :units do
+      helpers do
+        def warden
+          env['warden']
+        end
+
+        def authenticated
+          if warden.authenticated?
+            return true
+          else
+            error!('401 Unauthorized', 401)
+          end
+        end
+
+        def current_user
+          warden.user
+        end
+      end
+
+      before { redirect "/users/sign_in" unless current_user }
+
       desc "Get All Units"
       get "/" do
         Unit.all
@@ -13,6 +33,7 @@ module Inventory
       params do
         requires :id, :type => Integer
       end
+
       get ':id' do
         Unit.find(params[:id]) rescue "There is no unit with id of #{params[:id]}"
       end

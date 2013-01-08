@@ -1,4 +1,4 @@
-<h1>Unit<em>Selector</em></h1>
+<h1><i class="icon-signin"></i> Unit<em>Selector</em></h1>
 
 <div id="tabs">
   <ul>
@@ -9,7 +9,7 @@
 
   <div id="tabs-1">
     <div id="filters">
-      <h3>Filter by Attribute</h3>
+      <h3><i class="icon-check"></i> Filter by Attribute</h3>
 
       <ul class="filters attributes">
         <% @features.each do |feature| %>
@@ -20,7 +20,7 @@
         <% end %>
       </ul>
 
-      <h3>Filter by Size</h3>
+      <h3><i class="icon-check"></i> Filter by Size</h3>
 
       <ul class="filters sqft">
         <% @sizes.sort_by { |k,v| v }.each do |k, v| %>
@@ -31,7 +31,7 @@
         <% end %>
       </ul>
 
-      <button id="clear_filters">Clear Filters</button>
+      <button id="clear_filters"><i class="icon-minus-sign"></i> Clear Filters</button>
     </div>
 
     <%= render :partial => "data_table", :locals => {:units => @storage_units, :classs => 'self_storage'} %>
@@ -48,7 +48,7 @@
 
 <br />
 
-<%= link_to 'New Unit', new_unit_path, :class => 'new_unit' %>
+<a href="/units/new" class="new_unit"><i class="icon-plus"></i> New Unit</a>
 
 <select onchange="window.location.href=this.value;">
   <option selected>Edit Unit</option>
@@ -57,3 +57,16 @@
     <option value="/units/<%= u.id %>/edit"><%= u.size %> - <%= u.price %> - <%= u.description %></option>
   <% end %>
 </select>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center;">
+  <img src="<%= Gchart.pie(:data => [@storage_size, @wine_size, @parking_size],
+                           :background => "E6EBED",
+                           :labels => ["Storage Units #{@storage_size.to_s.gsub(".0","")}%", "Parking Units #{@parking_size}%", "Wine Units #{@wine_size}%"],
+                           :size => '500x200') %>">
+</p>
+
+<%#= high_chart("my_id4", @chart) do |c| %>
+  <%#= raw "options.plotOptions.pie.dataLabels.formatter = function() { if (this.y > 5) return this.point.name; }"  %>
+<%# end %>
